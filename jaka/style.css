@@ -29,6 +29,7 @@ a {
 ul {
   text-align: center;
 }
+/* TODO: język powinien być ujednolicony. Jak po angielsku, to po angielsku */
 
 .kolor {
   background-color: white;
@@ -37,6 +38,7 @@ ul {
   color: #5a5a5a;
   
 }
+/* TODO: Nazewnictwo klas z myślnikami, czyli w tym wypasdku logo-jaka */
 
 .logojaka {
   font-size: 40px;
@@ -49,6 +51,7 @@ ul {
   margin: 10px;
 }
 
+/* TODO: Dla fajniejszego efektu do hoverów możesz dodać jeszcze efekt transition https://www.w3schools.com/css/css3_transitions.asp */
 .btnpresentation:hover {
   background-color:#5a5a5a;
   color: white;
@@ -72,6 +75,7 @@ ul {
   font-size: 20px;
 }
 
+/* TODO: Tutaj przydałby się SCSS, żeby dało się zagnieżdżać. Pewnie w projekcie w React juz z tego kożystasz. */
 a.nav-link.active {
   font-size: 16px;
   
@@ -289,6 +293,7 @@ video {
   padding: 0px;
 }
 
+/* TODO: Sugeruję użycie background image dla robotbanner zamiast osobnego diva z tłem. A jeżeli nie ma innego wyjścia (widzę, że używasz filtra, czego dla background image nie dałoby się zastosować). ew. możesz użyć pseudoelementu. Tutaj przykład https://css-tricks.com/apply-a-filter-to-a-background-image/  */
 .robotpic {
   opacity: 0.9;
   object-fit: cover;
@@ -312,15 +317,23 @@ video {
 
 }
 
+/* TODO: Przyczyną tego, że na mobilce miałeś obcięte menu, jest poniższy element. Rozciągał on widoczny ekran powyżej szerokości body. Rozwiązań jest kilka.  Przerobiłem zdjęcie ramienia robota w taki sposób, żeby nie było wolnej przestrzeni wokół grafiki. Teraz możesz pobawić się z wypozycjonowaniem grafiki w zależności od szerokości ekranu przy pomocy @media query */
 .robotarm {
   position: absolute;
-  left: 50%;
-  bottom: -7%;
-  height: 90%;
+  left: 72%;
+  bottom: 9%;
+  height: 68%;
   animation-name: shuffleright;
   animation-duration: 5s;
   animation-delay: 3;
+  
+  /* Poniżej przykład jak można to zrobić dla zakresu między 600 a 1000 px */
+  /* @media (min-width: 600px) and (max-width: 1000px) {
+    left: 60%;
+  } */
 }
+
+
 
 .wrapper {
   font-size: 35px;
@@ -372,7 +385,7 @@ video {
   animation-duration: 5s;
 }
 
-
+/* TODO: Klasa nie jest używana */
 .visibleOnMobile {
   display: none;
 }
@@ -506,7 +519,7 @@ display: none;
 
 }
 
-
+/* TODO: Przy media query używałbym pixeli jako wartości bezwzględnych */
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
